@@ -106,9 +106,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/project1/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/project1/assets/vendors/bootstrap-icons/bootstrap-icons.css">
-
+    <link rel="stylesheet" href="/sun_powertools/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/sun_powertools/assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <script src="/sun_powertools/assets/js/main.js"></script>
+    <link rel="shortcut icon" href="favicon.ico">
     <style>
         :root {
             --login-bg: #f1f5f9;

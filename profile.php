@@ -205,8 +205,8 @@ $pageTitle = 'My Profile';
 require_once __DIR__ . '/includes/header.php';
 
 $avatarSrc = !empty($user['avatar'])
-    ? '/project1/uploads/avatars/' . htmlspecialchars($user['avatar'])
-    : '/project1/assets/images/avatar/avatar.jpg';
+    ? '/sun_powertools/uploads/avatars/' . htmlspecialchars($user['avatar'])
+    : '/sun_powertools/assets/images/avatar/avatar.jpg';
 ?>
 
 <main class="main-content">
@@ -260,7 +260,7 @@ $avatarSrc = !empty($user['avatar'])
                             <img src="<?= $avatarSrc ?>" alt="<?= htmlspecialchars($user['user_name']) ?>" 
                                  id="avatarPreview"
                                  class="rounded-circle w-100 h-100 object-fit-cover shadow border border-3 border-primary"
-                                 onerror="this.src='/project1/assets/images/avatar/avatar.jpg';">
+                                 onerror="this.src='/sun_powertools/assets/images/avatar/avatar.jpg';">
                             <label for="avatarInput" class="avatar-edit-btn position-absolute bottom-0 end-0 bg-primary text-white rounded-circle d-flex align-items-center justify-content-center shadow" 
                                    style="width: 38px; height: 38px; cursor: pointer;" title="Change Photo">
                                 <i class="bi bi-camera-fill"></i>

@@ -16,7 +16,7 @@ requireLogin();
 
 $loggedInUsername = 'User';
 $loggedInRole = 'User';
-$loggedInAvatar = '/project1/assets/images/avatar/avatar.jpg';
+$loggedInAvatar = '/sun_powertools/assets/images/avatar/avatar.jpg';
 
 /*
 |--------------------------------------------------------------------------
@@ -52,13 +52,13 @@ if (!empty($_SESSION['user_id'])) {
             }
 
             if (!empty($loggedInUser['avatar'])) {
-                $loggedInAvatar = '/project1/uploads/avatars/' . basename($loggedInUser['avatar']);
+                $loggedInAvatar = '/sun_powertools/uploads/avatars/' . basename($loggedInUser['avatar']);
             }
         }
     } catch (PDOException $e) {
         $loggedInUsername = 'User';
         $loggedInRole = 'User';
-        $loggedInAvatar = '/project1/assets/images/avatar/avatar.jpg';
+        $loggedInAvatar = '/sun_powertools/assets/images/avatar/avatar.jpg';
     }
 }
 
@@ -152,10 +152,10 @@ function renderBreadcrumbs(array $items): void
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- CSS Framework & Icons -->
-    <link rel="stylesheet" href="/project1/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/project1/assets/vendors/bootstrap-icons/bootstrap-icons.css">
-    <link rel="stylesheet" href="/project1/assets/css/master.css">
-    <link rel="stylesheet" href="/project1/assets/css/style.css">
+    <link rel="stylesheet" href="/sun_powertools/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/sun_powertools/assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="/sun_powertools/assets/css/master.css">
+    <link rel="stylesheet" href="/sun_powertools/assets/css/style.css">
 </head>
 <body>
 
@@ -210,7 +210,7 @@ function renderBreadcrumbs(array $items): void
                                 <div class="avatar-wrapper position-relative">
                                     <img class="avatar-img avatar-sm" src="<?= e($loggedInAvatar) ?>"
                                         alt="<?= e($loggedInUsername) ?>"
-                                        onerror="this.src='/project1/assets/images/avatar/avatar.jpg';">
+                                        onerror="this.src='/sun_powertools/assets/images/avatar/avatar.jpg';">
                                     <span class="status-indicator online"></span>
                                 </div>
 
@@ -226,7 +226,7 @@ function renderBreadcrumbs(array $items): void
                             <ul class="dropdown-menu dropdown-menu-end profile-dropdown-menu shadow-lg" id="profileMenu">
                                 <!-- Profile -->
                                 <li>
-                                    <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/project1/profile.php">
+                                    <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="/sun_powertools/profile.php">
                                         <span class="dropdown-item-icon bg-primary-subtle text-primary">
                                             <i class="bi bi-person-fill"></i>
                                         </span>
@@ -238,7 +238,7 @@ function renderBreadcrumbs(array $items): void
 
                                 <!-- Sign Out -->
                                 <li>
-                                    <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger" href="/project1/logout.php">
+                                    <a class="dropdown-item d-flex align-items-center gap-2 py-2 text-danger" href="/sun_powertools/logout.php">
                                         <span class="dropdown-item-icon bg-danger-subtle text-danger">
                                             <i class="bi bi-box-arrow-right"></i>
                                         </span>

@@ -180,6 +180,7 @@ CREATE TABLE `product_master` (
   `brand_id` int(11) NOT NULL,
   `description` text DEFAULT NULL,
   `sale_available` tinyint(1) NOT NULL DEFAULT 0,
+  `stock_quantity` int(11) NOT NULL DEFAULT 50,
   `purchase_price` decimal(12,2) DEFAULT NULL,
   `selling_price` decimal(12,2) DEFAULT NULL,
   `discount_allowed` tinyint(1) NOT NULL DEFAULT 0,
@@ -469,6 +470,18 @@ ALTER TABLE `product_type_master`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `sales_notes`
+--
+ALTER TABLE `sales_notes`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `sales_note_items`
+--
+ALTER TABLE `sales_note_items`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `unit_master`
 --
 ALTER TABLE `unit_master`
@@ -495,6 +508,12 @@ ALTER TABLE `product_images`
 --
 ALTER TABLE `product_rental_rates`
   ADD CONSTRAINT `product_rental_rates_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product_master` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `sales_note_items`
+--
+ALTER TABLE `sales_note_items`
+  ADD CONSTRAINT `fk_sni_sales_note` FOREIGN KEY (`sales_note_id`) REFERENCES `sales_notes` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

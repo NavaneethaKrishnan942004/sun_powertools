@@ -14,10 +14,10 @@
 <!-- /.admin-shell -->
 
 <!-- Bootstrap Bundle JS -->
-<script src="/project1/assets/js/bootstrap.bundle.min.js"></script>
+<script src="/sun_powertools/assets/js/bootstrap.bundle.min.js"></script>
 
 <!-- Application Core JS -->
-<script src="/project1/assets/js/main.js"></script>
+<script src="/sun_powertools/assets/js/main.js"></script>
 
 </body>
 </html>
